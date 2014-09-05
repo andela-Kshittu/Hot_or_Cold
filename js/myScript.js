@@ -34,10 +34,20 @@ function testResponse()
 		if (randNumber === userResponse)
 		{
 			$('#right').show();
+			$('#hot').hide();
+			$('#colder').hide();
+			$('#hotter').hide();
+			$('#cold').hide();
+			$('#guess').show();
+			$('#guess_again').hide();
 		}
 		else if (randNumber > userResponse) 
 		{
 			$('#cold').show();
+			$('#right').hide();
+			$('#hot').hide();
+			$('#colder').hide();
+			$('#hotter').hide();
 			if(randNumber !== userResponse)
 			{
 				prevResponse = userResponse;
@@ -52,6 +62,10 @@ function testResponse()
 		else if (randNumber < userResponse) 
 		{
 			$('#hot').show();
+			$('#cold').hide();
+			$('#right').hide();
+			$('#colder').hide();
+			$('#hotter').hide();
 			if(randNumber !== userResponse)
 			{
 				prevResponse = userResponse;
@@ -81,15 +95,29 @@ function playAgain(){
 	if (randNumber === userResponse)
 		{
 			$('#right').show();
+			$('#hot').hide();
+			$('#cold').hide();
+			$('#colder').hide();
+			$('#hotter').hide();
+			$('#guess').show();
+			$('#guess_again').hide();
 		}
 		else if ( diff1 > diff2) 
 		{
 			$('#colder').show();
+			$('#right').hide();
+			$('#hot').hide();
+			$('#cold').hide();
+			$('#hotter').hide();
 			prevResponse = userResponse;
 		}
 		else if (diff1 < diff2) 
 		{
 			$('#hotter').show();
+			$('#right').hide();
+			$('#hot').hide();
+			$('#colder').hide();
+			$('#cold').hide();
 			prevResponse = userResponse;
 		}
 
