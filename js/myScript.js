@@ -19,11 +19,14 @@ userResponse = parseInt( $('#userNumber').val());
 function isResponseValid()
 {
 
-	while (isNaN(userResponse) || (userResponse === null ) || (userResponse === undefined) || (userResponse > 100) || ( userResponse < 0)){
-		alert("please enter a valid number between 0 and 100");
+	if(isNaN(userResponse) || (userResponse === null ) || (userResponse === undefined) || (userResponse > 100) || ( userResponse < 0)){
+		$('#check').show();
 		getUserRespose();
 	}
-	return true;
+	else{
+		$('#check').hide();
+		return true;
+	}
 };
 
 

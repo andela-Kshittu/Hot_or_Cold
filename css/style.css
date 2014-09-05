@@ -1,6 +1,42 @@
+body{
+	background: black;
+
+}
 label {
 	display: none;
+	color: black;
 }
 #guess_again{
 	display: none;
+}
+form{
+	max-width: 30%;
+	height: 50%;
+	background: white;
+	margin-top: 10em;
+	margin-left:35%;
+	color: white;
+	border-radius:  30% 8%;
+}
+#userNumber{
+	height: 40%;
+	max-width: 30%;
+	border: 3px solid black;
+	border-radius:  30%;
+	font-size: 6em;
+	margin-bottom: 0.5em;
+	text-align: center;
+}
+.visibleLabels{
+	display: block;
+	padding: 1em;
+}
+button{
+	height: 15%;
+	width: 35%;
+	border-radius: 4% 30% ; 
+}
+#check{
+	display: none;
+	color:white;
 }
