@@ -1,21 +1,22 @@
 
-
+// GLOBAL VARIABLES
 var userResponse;
 var prevResponse = 0;
 var isValid;
 var diff1 = 0;
 var diff2 = 0;
 
+// GENERATE RANDOM NUMBER
 
-//function doRandomNum(){
 var randNumber = Math.floor(Math.random()*100);
 console.log(randNumber);
-//};
 
+// FETCH USER INPUT FROM TEXTBOX
 function getUserRespose(){
 	userResponse = parseInt( $('#userNumber').val());
 };
 
+// VALIDATES USER INPUT
 function isResponseValid()
 {
 
@@ -29,7 +30,7 @@ function isResponseValid()
 	}
 };
 
-
+// COMPARES USER INPUT WITH COMPUTER GUESS
 function testResponse()
 {
 	if (isValid === true)
@@ -81,7 +82,7 @@ function testResponse()
 		}
 	}
 };
-
+// A WELL STRUCTURED FUNCTION THAT EXECUTES EACH FUNCTION BASED ON THE USER INPUT
 function play(){
 	console.log(randNumber);
 	getUserRespose ();
@@ -89,7 +90,7 @@ function play(){
 	testResponse();
 };
 
-
+// THIS FUNCTION ALLOWS THE USER TO BE ABLE TO THROW A SECOND GUESS
 function playAgain(){
 	getUserRespose ();
 	isValid = isResponseValid();
@@ -127,11 +128,12 @@ function playAgain(){
 
 };
 
-
+// PLAY EVENT HANDLER
 $('#guess').click(function(event){
 	event.preventDefault();
 	play();
 });
+// SUBSEQUENT GUESSES EVENT HANDLER
 $('#guess_again').click(function(event){
 	event.preventDefault();
 	playAgain();

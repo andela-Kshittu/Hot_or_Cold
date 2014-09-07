@@ -8,6 +8,12 @@ form{
 header{ 
 	width:100%;
 }
+button{
+	font-size: 0.75em;
+}
+label{
+	font-size: 0.75em;
+}
 }
 
 

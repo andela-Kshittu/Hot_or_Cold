@@ -1,26 +1,60 @@
 body{
 	background: black;
-
+}
+/*********************
+HEADING OF THE PAGE
+*********************/
+header{
+	background: rgba(255,255,255,.2);
+	border: 2px dotted #fff;
+	color: black;
+	border-radius: 20px; 
+	width:60%;
+	height: 3.5em;
+	padding: 0px;
+	text-align: center;
+	margin:auto;
+}
+header h1{
+	margin: .2em;
+	margin-bottom: 0px;
+	vertical-align: middle;
+	font-family: 'Playball', sans-serif;
+}
+header p{
+	font-family: 'Indie Flower', sans-serif;
+	color: white;
+	margin: -0.5em;
+	font-size: 13px;
+}
+hr{
+	margin: -1em;
+}
+.headspan{
+	color: white;
+}
+/***************************
+COLOR OF LABELS AND DISPLAY
+****************************/
+label{
+	display: none;
+	color: black;
+	background: rgba(0,0,0,.3);
+	width:40%;
+	height: 1.5em;
+	padding: 0 0;
+	margin: 0 auto;
+	border-radius: 0 0 12px 12px;
+	font-size: 1.4em;
+	font-family: 'Lobster', sans-serif;
 }
 #hot, #hotter{
-	display: none;
 	color: white;
 	background: red;
 }
 #cold, #colder{
-	display: none;
 	color: white;
 	background: lightblue;
-}
-#guess_again{
-	display: none;
-}
-#form_wrapper{
-	display: inline;
-}
-#rules{
-	color: white;
-	text-align: center;
 }
 .cold{
 	color: lightblue;
@@ -28,18 +62,36 @@ body{
 .hot{
 	color: red;
 }
-
+.visibleLabels{
+	display: block;
+	padding: .4em;
+}
+/**********************************
+HOW TO PLAY
+***********************************/
+#rules{
+	color: white;
+	text-align: center;
+	font-family: 'Indie Flower', sans-serif;
+}
+/**********************************
+GENERAL FORM DESIGN AND STRUCTURE
+***********************************/
+#form_wrapper{
+	display: inline;
+}
 form{
 	max-width: 30%;
-	height: 60%;
+	height: 55%;
 	background:  url('../img/2.jpg'), rgba(255,255,255,.2);
 	margin: 1em auto;
 	color: white;
 	border-radius:  30% 8%;
 	text-align: center;
-	border: 4px dotted rgba(0,0,0,.5);
+	border: 2px dotted rgba(0,0,0,.9);
 	vertical-align: middle;
 }
+
 #userNumber{
 	height: 40%;
 	max-width: 45%;
@@ -50,52 +102,35 @@ form{
 	text-align: center;
 	background: rgba(0,0,0,.4);
 }
-.visibleLabels{
-	display: block;
-	padding: .4em;
-}
+/**********************************
+BUTTUONS
+***********************************/
 button{
 	height: 15%;
 	width: 35%;
 	border-radius: 4% 30% ; 
 	border: 2px dotted rgba(0,0,0,.6);
-	margin: 0em .4em;
+	margin-top: -1em ;
+	margin-bottom: 1em;
+	margin-right: .4em;
+	font-family: 'Lobster', sans-serif;
+	font-size: 1.2em;
 }
+#guess_again{
+	display: none;
+}
+/**********************************
+VALIDATION
+***********************************/
 #check{
 	display: none;
 	color:red;
 	text-align: center;
 }
-header{
-	background: rgba(255,255,255,.2);
-	border: 2px dotted #fff;
-	color: black;
-	border-radius: 20px; 
-	width:60%;
-	height: 3em;
-	padding: 0px;
-	text-align: center;
-	margin:auto;
-}
-header h1{
-	margin: .2em;
-	vertical-align: middle;
-}
 
-.headspan{
-	color: white;
-}
-label{
-	display: none;
-	color: black;
-	background: rgba(0,0,0,.3);
-	width:40%;
-	height: 1.7em;
-	padding: 0 0;
-	margin: 0 auto;
-	border-radius: 0 0 6px 6px;
-	font-size: 1.4em
-}
+
+
+
 
 
 
