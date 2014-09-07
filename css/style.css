@@ -2,41 +2,142 @@ body{
 	background: black;
 
 }
-label {
+#hot, #hotter{
 	display: none;
-	color: black;
+	color: white;
+	background: red;
+}
+#cold, #colder{
+	display: none;
+	color: white;
+	background: lightblue;
 }
 #guess_again{
 	display: none;
 }
+#form_wrapper{
+	display: inline;
+}
+#rules{
+	color: white;
+	text-align: center;
+}
+.cold{
+	color: lightblue;
+}
+.hot{
+	color: red;
+}
+
 form{
 	max-width: 30%;
-	height: 50%;
-	background: white;
-	margin-top: 10em;
-	margin-left:35%;
+	height: 60%;
+	background:  url('../img/2.jpg'), rgba(255,255,255,.2);
+	margin: 1em auto;
 	color: white;
 	border-radius:  30% 8%;
+	text-align: center;
+	border: 4px dotted rgba(0,0,0,.5);
+	vertical-align: middle;
 }
 #userNumber{
 	height: 40%;
-	max-width: 30%;
+	max-width: 45%;
 	border: 3px solid black;
 	border-radius:  30%;
 	font-size: 6em;
-	margin-bottom: 0.5em;
+	margin: 0.4em auto;
 	text-align: center;
+	background: rgba(0,0,0,.4);
 }
 .visibleLabels{
 	display: block;
-	padding: 1em;
+	padding: .4em;
 }
 button{
 	height: 15%;
 	width: 35%;
 	border-radius: 4% 30% ; 
+	border: 2px dotted rgba(0,0,0,.6);
+	margin: 0em .4em;
 }
 #check{
 	display: none;
-	color:white;
+	color:red;
+	text-align: center;
 }
+header{
+	background: rgba(255,255,255,.2);
+	border: 2px dotted #fff;
+	color: black;
+	border-radius: 20px; 
+	width:60%;
+	height: 3em;
+	padding: 0px;
+	text-align: center;
+	margin:auto;
+}
+header h1{
+	margin: .2em;
+	vertical-align: middle;
+}
+
+.headspan{
+	color: white;
+}
+label{
+	display: none;
+	color: black;
+	background: rgba(0,0,0,.3);
+	width:40%;
+	height: 1.7em;
+	padding: 0 0;
+	margin: 0 auto;
+	border-radius: 0 0 6px 6px;
+	font-size: 1.4em
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

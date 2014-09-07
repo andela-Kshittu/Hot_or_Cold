@@ -8,12 +8,12 @@ var diff2 = 0;
 
 
 //function doRandomNum(){
-	var randNumber = Math.floor(Math.random()*100);
-	console.log(randNumber);
+var randNumber = Math.floor(Math.random()*100);
+console.log(randNumber);
 //};
 
 function getUserRespose(){
-userResponse = parseInt( $('#userNumber').val());
+	userResponse = parseInt( $('#userNumber').val());
 };
 
 function isResponseValid()
@@ -41,7 +41,7 @@ function testResponse()
 			$('#colder').hide();
 			$('#hotter').hide();
 			$('#cold').hide();
-			$('#guess').show();
+			$('#guess').hide();
 			$('#guess_again').hide();
 		}
 		else if (randNumber > userResponse) 
@@ -83,10 +83,10 @@ function testResponse()
 };
 
 function play(){
-console.log(randNumber);
-getUserRespose ();
-isValid = isResponseValid();
-testResponse();
+	console.log(randNumber);
+	getUserRespose ();
+	isValid = isResponseValid();
+	testResponse();
 };
 
 
@@ -102,7 +102,7 @@ function playAgain(){
 			$('#cold').hide();
 			$('#colder').hide();
 			$('#hotter').hide();
-			$('#guess').show();
+			$('#guess').hide();
 			$('#guess_again').hide();
 		}
 		else if ( diff1 > diff2) 
