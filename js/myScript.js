@@ -52,6 +52,7 @@ function testResponse()
 			$('#hot').hide();
 			$('#colder').hide();
 			$('#hotter').hide();
+			
 			if(randNumber !== userResponse)
 			{
 				prevResponse = userResponse;
@@ -70,6 +71,7 @@ function testResponse()
 			$('#right').hide();
 			$('#colder').hide();
 			$('#hotter').hide();
+			
 			if(randNumber !== userResponse)
 			{
 				prevResponse = userResponse;
@@ -128,14 +130,17 @@ function playAgain(){
 
 };
 
+
 // PLAY EVENT HANDLER
 $('#guess').click(function(event){
 	event.preventDefault();
 	play();
+	$( "#wrap" ).css( "background","yellow" );
 });
 // SUBSEQUENT GUESSES EVENT HANDLER
 $('#guess_again').click(function(event){
 	event.preventDefault();
 	playAgain();
+	$('#wrap').css("background","blue");
 });
 
