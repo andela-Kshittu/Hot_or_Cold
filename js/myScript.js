@@ -1,146 +1,101 @@
-
 // GLOBAL VARIABLES
 var userResponse;
-var prevResponse = 0;
+var prevResponse = undefined;
 var isValid;
-var diff1 = 0;
-var diff2 = 0;
-
 // GENERATE RANDOM NUMBER
-
 var randNumber = Math.floor(Math.random()*100);
 console.log(randNumber);
 
+var actions = {
+	// PLAY EVENT HANDLER
+init:function(){
+	$('#guess').click(function(event){
+	event.preventDefault();
+	if (prevResponse === undefined)
+	{ actions.play(); }
+	else{ actions.playAgain();}
+	actions.setBar();
+});
+},
 // FETCH USER INPUT FROM TEXTBOX
-function getUserRespose(){
-	userResponse = parseInt( $('#userNumber').val());
-};
-
+getUserRespose: function(){
+				userResponse = parseInt( $('#userNumber').val());
+},
 // VALIDATES USER INPUT
-function isResponseValid()
-{
-
+isResponseValid: function(){
 	if(isNaN(userResponse) || (userResponse === null ) || (userResponse === undefined) || (userResponse > 100) || ( userResponse < 0)){
 		$('#check').show();
-		getUserRespose();
+		actions.getUserRespose();
 	}
 	else{
 		$('#check').hide();
 		return true;
 	}
-};
-
+},
 // COMPARES USER INPUT WITH COMPUTER GUESS
-function testResponse()
+setPlay : function(){
+		prevResponse = userResponse;
+		actions.playAgain();
+},
+reply: function(value){
+		$('#report').text("You are "+value);
+},
+replySetplay :function(value){
+		actions.reply(value); 
+		actions.setPlay();
+},
+testResponse:function()
 {
 	if (isValid === true)
 	{
 		if (randNumber === userResponse)
 		{
-			$('#right').show();
-			$('#hot').hide();
-			$('#colder').hide();
-			$('#hotter').hide();
-			$('#cold').hide();
-			$('#guess').hide();
-			$('#guess_again').hide();
+			actions.reply("Right"); 
 		}
-		else if (randNumber > userResponse) 
+		else if (Math.abs(randNumber - userResponse) > 49)
 		{
-			$('#cold').show();
-			$('#right').hide();
-			$('#hot').hide();
-			$('#colder').hide();
-			$('#hotter').hide();
-			
-			if(randNumber !== userResponse)
-			{
-				prevResponse = userResponse;
-				playAgain();
-				$('#guess').hide();
-				$('#guess_again').show();
-				
-			}
-
-			
-		}
-		else if (randNumber < userResponse) 
+			actions.replySetplay("Cold")
+		}		
+		else if (Math.abs(randNumber - userResponse) < 50)
 		{
-			$('#hot').show();
-			$('#cold').hide();
-			$('#right').hide();
-			$('#colder').hide();
-			$('#hotter').hide();
-			
-			if(randNumber !== userResponse)
-			{
-				prevResponse = userResponse;
-				playAgain();
-				$('#guess').hide();
-				$('#guess_again').show();
-			}
-			
-
+			actions.replySetplay("Hot"); 		
 		}
 	}
-};
+},
 // A WELL STRUCTURED FUNCTION THAT EXECUTES EACH FUNCTION BASED ON THE USER INPUT
-function play(){
-	console.log(randNumber);
-	getUserRespose ();
-	isValid = isResponseValid();
-	testResponse();
-};
-
+play: function(){
+	actions.getUserRespose();
+	isValid = actions.isResponseValid();
+	actions.testResponse();
+},
 // THIS FUNCTION ALLOWS THE USER TO BE ABLE TO THROW A SECOND GUESS
-function playAgain(){
-	getUserRespose ();
-	isValid = isResponseValid();
-	diff1 = Math.abs(userResponse - randNumber);
-	diff2 = Math.abs(prevResponse - randNumber);
+playAgain: function(){
+	actions.getUserRespose();
+	isValid = actions.isResponseValid();
+	var diff1 = Math.abs(userResponse - randNumber);
+	var diff2 = Math.abs(prevResponse - randNumber);
 	if (randNumber === userResponse)
 		{
-			$('#right').show();
-			$('#hot').hide();
-			$('#cold').hide();
-			$('#colder').hide();
-			$('#hotter').hide();
-			$('#guess').hide();
+			actions.reply("Right");
 			$('#guess_again').hide();
 		}
 		else if ( diff1 > diff2) 
 		{
-			$('#colder').show();
-			$('#right').hide();
-			$('#hot').hide();
-			$('#cold').hide();
-			$('#hotter').hide();
+			actions.reply("Colder");
 			prevResponse = userResponse;
 		}
 		else if (diff1 < diff2) 
 		{
-			$('#hotter').show();
-			$('#right').hide();
-			$('#hot').hide();
-			$('#colder').hide();
-			$('#cold').hide();
+			actions.reply("Hotter");
 			prevResponse = userResponse;
 		}
-
-
+},
+setBar:function(){
+var progress = (100 - (Math.abs(randNumber - userResponse)))*2.4;
+$('#prog-bar').animate({ width: progress }, 1000);
+	}
 };
+actions.init();
 
 
-// PLAY EVENT HANDLER
-$('#guess').click(function(event){
-	event.preventDefault();
-	play();
-	$( "#wrap" ).css( "background","yellow" );
-});
-// SUBSEQUENT GUESSES EVENT HANDLER
-$('#guess_again').click(function(event){
-	event.preventDefault();
-	playAgain();
-	$('#wrap').css("background","blue");
-});
 

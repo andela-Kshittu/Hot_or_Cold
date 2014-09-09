@@ -37,7 +37,6 @@ hr{
 COLOR OF LABELS AND DISPLAY
 ****************************/
 label{
-	display: none;
 	color: black;
 	background: rgba(0,0,0,.3);
 	width:40%;
@@ -47,14 +46,6 @@ label{
 	border-radius: 0 0 12px 12px;
 	font-size: 1.2em;
 	font-family: 'Lobster', sans-serif;
-}
-#hot, #hotter{
-	color: white;
-	background: red;
-}
-#cold, #colder{
-	color: white;
-	background: lightblue;
 }
 .cold{
 	color: lightblue;
@@ -150,13 +141,14 @@ PROGRESS BAR DESIGN AND ANIMATION
 	background: black;
 }
 #prog-bar{
-	width: 100%;
+	width: 0%;
 	height: .8em;
 	border-radius: 10px;
-	background: red;
+	/*background: red;*/
+	background:-webkit-linear-gradient(left,blue,red);
 	-webkit-animation-name:slide;
 	-webkit-animation-duration:3s;
-	-webkit-animation-timing-functio:ease out;
+	-webkit-animation-timing-function:ease out;
 }
 
 @-webkit-keyframes slide{
