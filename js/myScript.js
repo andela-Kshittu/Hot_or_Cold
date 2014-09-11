@@ -91,7 +91,7 @@ playAgain: function(){
 		}
 },
 setBar:function(){
-var progress = (100 - (Math.abs(randNumber - userResponse)))*2.4;
+var progress = (100 - (Math.abs(randNumber - userResponse)))+"%";
 $('#prog-bar').animate({ width: progress }, 1000);
 	}
 };

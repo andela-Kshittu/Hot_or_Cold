@@ -1,10 +1,10 @@
 @media screen and (max-width: 480px){
-
-
+#userNumber{
+	margin: 0.2em auto;
+}
 form{
 	max-width: 100%;
 }
-
 header{ 
 	width:100%;
 }
@@ -17,11 +17,13 @@ label{
 }
 
 @media screen and (min-width: 768px){
+#userNumber{
+	margin: 0.2em auto 0.4em;
+}
 form{
 	max-width: 60%;
 	max-height: 50%;
 }
-
 header{ 
 	width:100%;
 }

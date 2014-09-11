@@ -28,10 +28,17 @@ header p{
 	font-size: 13px;
 }
 hr{
-	margin: -1em;
+	margin: -1em auto;
+	width: 20%;
+
 }
 .headspan{
 	color: white;
+	text-shadow: 5px 5px 5px red;
+}
+.headspan2{
+	color: white;
+	text-shadow: 5px 5px 5px lightblue;
 }
 /***************************
 COLOR OF LABELS AND DISPLAY
@@ -144,17 +151,26 @@ PROGRESS BAR DESIGN AND ANIMATION
 	width: 0%;
 	height: .8em;
 	border-radius: 10px;
-	/*background: red;*/
+	background: red;
 	background:-webkit-linear-gradient(left,blue,red);
+	background:-moz-linear-gradient(left,blue,red);
 	-webkit-animation-name:slide;
 	-webkit-animation-duration:3s;
 	-webkit-animation-timing-function:ease out;
+	-moz-animation-name:slide;
+	-moz-animation-duration:3s;
+	-moz-animation-timing-function:ease out;
 }
 
 @-webkit-keyframes slide{
 	0% { width: 0% }
 	100% { width: 100%;}
 }
+@-moz-keyframes slide{
+	0% { width: 0% }
+	100% { width: 100%;}
+}
+
 
 
 
