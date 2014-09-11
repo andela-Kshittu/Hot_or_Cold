@@ -19,11 +19,11 @@ init:function(){
 },
 // FETCH USER INPUT FROM TEXTBOX
 getUserRespose: function(){
-				userResponse = parseInt( $('#userNumber').val());
+				userResponse = $.trim(parseInt( $('#userNumber').val()));
 },
 // VALIDATES USER INPUT
 isResponseValid: function(){
-	if(isNaN(userResponse) || (userResponse === null ) || (userResponse === undefined) || (userResponse > 100) || ( userResponse < 0)){
+	if(isNaN(userResponse) ||(userResponse > 100) || ( userResponse < 0)){
 		$('#check').show();
 		actions.getUserRespose();
 	}
