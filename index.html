@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+		<title>Hot Or Cold||Shittu</title>
+		<link href='http://fonts.googleapis.com/css?family=Lobster|Indie+Flower|Playball' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/responsive.css">
+	</head>
+	<body>
+			<header>
+  				<h1><span class="headspan">Hot</span> Or<span class="headspan2"> Cold</span></h1>
+  				<p>&copy Shittu Kenny || This Is Andela { T I A }</p>
+			</header>
+			<div id="rules">
+				<h3>How To Play</h3>
+				<hr>
+				<p>Mr <span class="hot">Tempe</span><span class="cold">rature</span> has a Number in his mind you need to guess this Number</p>
+				<p>The closer you get to the number, the <span class="hot">Hotter</span> you become</p>
+				<p>The farther you get the <span class="cold">Colder</span> you become</p>
+				<p>Let your guess be between <span class="hot">0</span> -- <span class="cold">100</span>, Have FUN!!!</p>
+			</div>
+			<h3 id="check"> Please enter a valid number between <span class="cold">0</span> and <span class="cold">100</span></h3>
+			<div id="form_wrapper">
+				<form>
+					<label for = "userNumber" class = "visibleLabels"> Enter a Number</label>
+					<input type = "text" id = "userNumber" name = "userNumber" ><br>
+					<button type = "submit" id = "guess" name = "guess">My Guess Is!</button>
+					<button type = "submit" id = "guess_again" name = "guess">My New Guess Is!</button>
+					<button type = "submit" id = "restart" name = "restart" value="index.html">New Game</button><br>
+					<div>
+						<label id = "report"></label>
+					</div>
+					<div class = "wrap">
+						<div id = "prog-bar"></div>
+					<div>
+				</form>
+			</div>
+	</body> 
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/myScript.js" type="text/javascript" charset="utf-8"></script>
+</html>

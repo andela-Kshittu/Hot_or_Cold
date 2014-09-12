@@ -1,0 +1,218 @@
+body{
+	background: black;
+}
+/*********************
+HEADING OF THE PAGE
+*********************/
+header{
+	background: rgba(255,255,255,.2);
+	border: 2px dotted #fff;
+	color: black;
+	border-radius: 20px; 
+	width:60%;
+	height: 3.5em;
+	padding: 0px;
+	text-align: center;
+	margin:auto;
+}
+header h1{
+	margin: .2em;
+	margin-bottom: 0px;
+	vertical-align: middle;
+	font-family: 'Playball', sans-serif;
+}
+header p{
+	font-family: 'Indie Flower', sans-serif;
+	color: white;
+	margin: -0.5em;
+	font-size: 13px;
+}
+hr{
+	margin: -1em auto;
+	width: 20%;
+
+}
+.headspan{
+	color: white;
+	text-shadow: 5px 5px 5px red;
+}
+.headspan2{
+	color: white;
+	text-shadow: 5px 5px 5px lightblue;
+}
+/***************************
+COLOR OF LABELS AND DISPLAY
+****************************/
+label{
+	color: black;
+	background: rgba(0,0,0,.3);
+	width:40%;
+	height: 1.5em;
+	padding: 0 0;
+	margin: 0 auto;
+	border-radius: 0 0 12px 12px;
+	font-size: 1.2em;
+	font-family: 'Lobster', sans-serif;
+}
+.cold{
+	color: lightblue;
+}
+.hot{
+	color: red;
+}
+.visibleLabels{
+	display: block;
+	padding: .4em;
+}
+/**********************************
+HOW TO PLAY
+***********************************/
+#rules{
+	color: white;
+	text-align: center;
+	font-family: 'Indie Flower', sans-serif;
+}
+/**********************************
+GENERAL FORM DESIGN AND STRUCTURE
+***********************************/
+#form_wrapper{
+	display: inline;
+}
+form{
+	max-width: 30%;
+	height: 55%;
+	background:  url('../img/2.jpg'), rgba(255,255,255,.2);
+	margin: 1em auto;
+	color: white;
+	border-radius:  30% 8%;
+	text-align: center;
+	border: 2px dotted rgba(0,0,0,.9);
+	vertical-align: middle;
+}
+form:hover{
+	background:  url('../img/6.jpg') no-repeat center/cover;
+}
+/**********************************
+INPUT BOX
+***********************************/
+#userNumber{
+	height: 40%;
+	max-width: 45%;
+	border: 3px solid black;
+	border-radius:  30%;
+	font-size: 6em;
+	margin: 0.4em auto;
+	text-align: center;
+	background: rgba(0,0,0,.1);
+}
+#userNumber:hover{
+	background: rgba(0,0,0,.4);
+}
+/**********************************
+BUTTUONS
+***********************************/
+button{
+	height: 15%;
+	width: 35%;
+	border-radius: 4% 30% ; 
+	border: 2px dotted rgba(0,0,0,.6);
+	margin-top: -1em ;
+	margin-bottom: 1em;
+	margin-right: .4em;
+	font-family: 'Lobster', sans-serif;
+	font-size: 1.0em;
+}
+button:hover{
+	background: rgba(0,0,0,.4);
+}
+#guess_again{
+	display: none;
+}
+/**********************************
+VALIDATION
+***********************************/
+#check{
+	display: none;
+	color:red;
+	text-align: center;
+	font-family: 'Indie Flower', sans-serif;
+}
+/**********************************
+PROGRESS BAR DESIGN AND ANIMATION
+***********************************/
+.wrap{
+	margin: 4px auto;
+	padding: 2px;
+	width: 60%;
+	border-radius: 10px;
+	background: black;
+}
+#prog-bar{
+	width: 0%;
+	height: .8em;
+	border-radius: 10px;
+	background: red;
+	background:-webkit-linear-gradient(left,blue,red);
+	background:-moz-linear-gradient(left,blue,red);
+	-webkit-animation-name:slide;
+	-webkit-animation-duration:3s;
+	-webkit-animation-timing-function:ease out;
+	-moz-animation-name:slide;
+	-moz-animation-duration:3s;
+	-moz-animation-timing-function:ease out;
+}
+
+@-webkit-keyframes slide{
+	0% { width: 0% }
+	100% { width: 100%;}
+}
+@-moz-keyframes slide{
+	0% { width: 0% }
+	100% { width: 100%;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
